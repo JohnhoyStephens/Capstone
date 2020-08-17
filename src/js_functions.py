@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder as SklearnOneHotEncoder
-
+from keras import backend as K
 
 def training_data(df):
     """
@@ -111,3 +111,12 @@ def process_data(df):
     
 #retuning the final data frame via a train test split
     return training_data(final_df)
+
+
+
+def coeff_determination(y_true, y_pred):
+    """https://jmlb.github.io/ml/2017/03/20/CoeffDetermination_CustomMetric4Keras/"""
+
+    SS_res =  K.sum(K.square( y_true-y_pred )) 
+    SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
+    return ( 1 - SS_res/(SS_tot + K.epsilon()) )

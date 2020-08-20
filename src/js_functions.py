@@ -120,3 +120,13 @@ def coeff_determination(y_true, y_pred):
     SS_res =  K.sum(K.square( y_true-y_pred )) 
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
     return ( 1 - SS_res/(SS_tot + K.epsilon()) )
+
+
+def adj_rsqaured(model,X_train,y_train):
+    n=X_train.shape[0] 
+    p=X_train.shape[1]
+    r2_score=model.score(X_train,y_train)    
+    adj_r2 = (1-(1-r2_score)*((n-1)/(n-p-1)))
+    
+    return adj_r2
+    

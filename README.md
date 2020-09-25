@@ -3,7 +3,7 @@ Prior to running any of the Jupyter Notbooks or data download the neccesary file
 # General Setup Guide:
 
 Download [Andaconda](https://docs.anaconda.com/anaconda/install/) to be able to install the environment and use your preference of commandline options or Editor to view the data.
-Also go to this [Census](https://www2.census.gov/programs-surveys/acs/data/pums/2018/5-Year/) link to and download the csv_hil.zip to acquire the data used in this project.
+Also go to this [Census](https://www2.census.gov/programs-surveys/acs/data/pums/2018/5-Year/) link to and download the csv_hil.zip to acquire the data used in this project. Then place the download in the data folder to allow for a smooth utilization of the prewritten code.
 
 ### Use the YAML files below to create the environments to run the data.
 

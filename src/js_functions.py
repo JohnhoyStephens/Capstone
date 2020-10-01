@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder as SklearnOneHotEncoder
-from keras import backend as K
 
 def training_data(df):
     """
